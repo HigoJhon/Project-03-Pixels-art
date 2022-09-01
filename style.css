@@ -1,6 +1,14 @@
+#color-palette{
+    height: auto;
+    width: auto;
+    margin: auto;
+}
 .color {
     border: black solid 1px;
     display: inline-block;
+    height: 40px;
+    width: 40px;
+    margin: auto;
 }
 #cor1 {
    background-color: black;
@@ -13,4 +21,22 @@
 }
 #cor4 {
     background-color: teal;
+}
+#pixel-board {
+    
+    height: auto;
+    width: auto;
+}
+.pixel {
+    height: 40px;
+    width: 40px;
+    border:black solid 1px;
+    display: inline-block;
+    background-color: white
+}
+body {
+    background-color: rgb(41, 75, 75);
+    text-align: center;
+    color: brown;
+    font-size: 10px;
 }
