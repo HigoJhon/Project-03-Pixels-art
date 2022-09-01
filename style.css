@@ -2,7 +2,12 @@
     height: auto;
     width: auto;
     margin: auto;
+    
 }
+.selected {
+    background-color: black;
+}
+
 .color {
     border: black solid 1px;
     display: inline-block;
