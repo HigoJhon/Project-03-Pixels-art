@@ -1,12 +1,20 @@
-function cores() {
-    let div1 = document.getElementsByTagName("div")[1];
-    div1.style.backgroundColor = "black";
-    let div2 = document.getElementsByTagName("div")[2];
-    div2.style.backgroundColor = "red";
-    let div3 = document.getElementsByTagName("div")[3];
-    div3.style.backgroundColor = "yellow";
-    let div4 = document.getElementsByTagName("div")[4];
-    div4.style.backgroundColor = "aqua";
-}cores()
+//aprendi assistindo em um canal no youtube chamado zigzag.
+function mudarCores() {
+    let codigo ="123456789ABCDEF"
+    let jogodavelha = "#"
+    let resultado; 
+
+    for (let index = 0;index < 6 ;index += 1){
+        resultado = jogodavelha += codigo.charAt(Math.floor(Math.random() * codigo.length));
+    }
+   return resultado
+} 
+function clicou(){
+    let resultado;
+    for (let index = 1; index < 4 ;index += 1){
+        let cores = document.getElementById(`cor${index+1}`);
+        resultado = cores.style.background = mudarCores();
+    } return resultado;
+}
 
 
