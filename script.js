@@ -34,17 +34,28 @@ function coresSalvas() {
 } coresSalvas();
 
 const todasCores = document.getElementsByClassName("color");
-  for (let index = 0 ; index < todasCores.length; index += 1){
+for (let index = 0; index < todasCores.length; index += 1) {
     todasCores[index].addEventListener("click", select);
-  }
-    
+}
+
 
 function select(func) {
     let input = func.target;
 
     const selec = document.querySelector(".selected");
     selec.classList.remove("selected");
-    input.classList.add("selected");    
+    input.classList.add("selected");
+}
+
+const corSelec = document.getElementsByClassName("selected");
+let div = document.getElementsByClassName("pixel");
+for (let index = 0;index < div.length;index += 1){
+    div[index].addEventListener("click", colorirDiv);
 }
 
 
+
+function colorirDiv(pix) {
+    let input = pix.target;  
+    input.style.backgroundColor = corSelec[0].style.backgroundColor
+}
