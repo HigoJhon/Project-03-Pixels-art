@@ -1,19 +1,19 @@
 //aprendi assistindo em um canal no youtube chamado zigzag
 function mudarCores() {
-    let codigo = "123456789ABCDEF"
-    let jogodavelha = "#"
-    let resultado;
+  let codigo = "123456789ABCDEF"
+  let jogodavelha = "#"
+  let resultado;
 
-    for (let index = 0; index < 6; index += 1) {
-        resultado = jogodavelha += codigo.charAt(Math.floor(Math.random() * codigo.length));
-    }
-    return resultado
+  for (let index = 0; index < 6; index += 1) {
+    resultado = jogodavelha += codigo.charAt(Math.floor(Math.random() * codigo.length));
+  }
+  return resultado
 }
 function clicou() {
 
-    let resultado = []
-    for (let index = 1; index < 4; index += 1) {
-        let cores = document.getElementById(`cor${index + 1}`);
+  const resultado = [];
+  for (let index = 1; index < 4; index += 1) {
+    let cores = document.getElementById(`cor${index + 1}`);
         cores.style.backgroundColor = mudarCores();
         resultado.push(cores.style.backgroundColor);
 
@@ -49,13 +49,17 @@ function select(func) {
 
 const corSelec = document.getElementsByClassName("selected");
 let div = document.getElementsByClassName("pixel");
-for (let index = 0;index < div.length;index += 1){
-    div[index].addEventListener("click", colorirDiv);
+for (let index = 0; index < div.length; index += 1) {
+  div[index].addEventListener("click", colorirDiv);
 }
-
-
-
+// Gustavo willig ajudou
 function colorirDiv(pix) {
-    let input = pix.target;  
-    input.style.backgroundColor = corSelec[0].style.backgroundColor
+  let input = pix.target;
+  input.style.backgroundColor = corSelec[0].style.backgroundColor;
+}
+function limpar() {
+  const divs = document.querySelectorAll('.pixel');
+  for (let index = 0; index < divs.length; index += 1) {
+    divs[index].style.background = 'white';
+  }
 }
