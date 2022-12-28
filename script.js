@@ -4,6 +4,7 @@ function mudarCores() {
   let jogodavelha = "#"
   let resultado;
 
+  
   for (let index = 0; index < 6; index += 1) {
     resultado = jogodavelha += codigo.charAt(Math.floor(Math.random() * codigo.length));
   }
